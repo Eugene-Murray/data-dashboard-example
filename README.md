@@ -21,6 +21,15 @@
 
 ![image](https://github.com/user-attachments/assets/2975bf3b-a437-4968-af37-f5e9fcb423a8)
 
+## NGRX Actions;
+![image](https://github.com/user-attachments/assets/8639845c-ee2d-4a2d-ad71-b93df1f8b6e0)
+
+## NGRX Reducer example;
+![image](https://github.com/user-attachments/assets/8e10abd2-0c00-4b97-a970-cbeeb8f866b7)
+
+## NGRX Effect example;
+![image](https://github.com/user-attachments/assets/5f0ff94e-5f73-4cfb-b404-c5b83fbd3d7e)
+
 ## API Unit Tests;
 ![image](https://github.com/user-attachments/assets/c69a3ae9-2f82-4fa1-b7be-09af627e0923)
 
