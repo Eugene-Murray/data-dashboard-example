@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { Policy } from '@wtw/models';
+import { Policy } from '@data-dashboard/models';
 
 export const getPolicies         = createAction('[Policy] Get all Policies');
 export const getPoliciesSuccess  = createAction('[Policy] Get all Policies Success', props<{ policies: Policy[] }>());

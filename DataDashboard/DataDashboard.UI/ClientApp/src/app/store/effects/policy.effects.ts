@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { PolicyService } from '@wtw/services';
+import { PolicyService } from '@data-dashboard/services';
 import { of } from 'rxjs';
 import { catchError, map, switchMap, withLatestFrom } from 'rxjs/operators';
 import * as actions from '../actions/policy.actions';
 import { Store } from '@ngrx/store';
-import { AppState, Policy, PolicyTypeDetail } from '@wtw/models';
+import { AppState, Policy, PolicyTypeDetail } from '@data-dashboard/models';
 import { selectPolicyTypeDetails } from '../selectors';
 import { policyTypeToNumber } from '../../common/helpers';
 import { ToastrService } from 'ngx-toastr';

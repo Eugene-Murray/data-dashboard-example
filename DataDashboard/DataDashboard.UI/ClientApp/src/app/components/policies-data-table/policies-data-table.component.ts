@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Gender, Policy, PolicyType } from '@wtw/models';
+import { Gender, Policy, PolicyType } from '@data-dashboard/models';
 import { PolicyTypePipe } from '../../pipes/policy-type.pipe';
 import { cloneDeep } from 'lodash';
 import { policyTypeToString } from '../../common/helpers';
 
 @Component({
-  selector: 'wtw-policies-data-table',
+  selector: 'data-dashboard-policies-data-table',
   imports: [CommonModule, FormsModule, PolicyTypePipe],
   templateUrl: './policies-data-table.component.html',
   styleUrl: './policies-data-table.component.css',

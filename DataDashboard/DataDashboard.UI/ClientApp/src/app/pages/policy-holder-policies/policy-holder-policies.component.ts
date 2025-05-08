@@ -2,16 +2,16 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { AppState, Policy } from '@wtw/models';
-import { selectIsPoliciesLoaded, selectPoliciesByPolicyHolderId } from '@wtw/store';
-import * as actions from '@wtw/store';
+import { AppState, Policy } from '@data-dashboard/models';
+import { selectIsPoliciesLoaded, selectPoliciesByPolicyHolderId } from '@data-dashboard/store';
+import * as actions from '@data-dashboard/store';
 import { Observable } from 'rxjs';
 import { PolicyTypePipe } from '../../pipes/policy-type.pipe';
 import { UntilDestroy } from '@ngneat/until-destroy';
 
 @UntilDestroy()
 @Component({
-  selector: 'wtw-policy-holder-policies',
+  selector: 'data-dashboard-policy-holder-policies',
   imports: [CommonModule, RouterModule, PolicyTypePipe],
   templateUrl: './policy-holder-policies.component.html',
   styleUrl: './policy-holder-policies.component.css',

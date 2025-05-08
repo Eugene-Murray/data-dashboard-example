@@ -22,7 +22,7 @@ export const appConfig: ApplicationConfig = {
       }
     }),
     provideHttpClient(),
-    { provide: APP_ID, useValue: 'wtw-fs-test' },
+    { provide: APP_ID, useValue: 'data-dashboard-fs-test' },
     provideRouter(appRoutes),
     provideStore({
       policyState: fromStore.policyReducer,

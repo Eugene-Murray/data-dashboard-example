@@ -7,24 +7,24 @@ import {
   OnInit,
   PLATFORM_ID,
 } from '@angular/core';
-import { AppState, PolicyTypeDetail } from '@wtw/models';
+import { AppState, PolicyTypeDetail } from '@data-dashboard/models';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import * as actions from '@wtw/store';
+import * as actions from '@data-dashboard/store';
 import {
   selectIsPolicyTypeDetailsLoaded,
   selectIsPolicyTypeDetailsLoading,
   selectPolicyTypeCount,
   selectPolicyTypeDetails,
-} from '@wtw/store';
+} from '@data-dashboard/store';
 import { PolicyTypePipe } from 'src/app/pipes/policy-type.pipe';
 import { ChartModule } from 'primeng/chart';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
 @UntilDestroy()
 @Component({
-  selector: 'wtw-policy-type-details',
+  selector: 'data-dashboard-policy-type-details',
   imports: [CommonModule, PolicyTypePipe, ChartModule],
   templateUrl: './policy-type-details.component.html',
   styleUrl: './policy-type-details.component.css',

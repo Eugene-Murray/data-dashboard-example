@@ -2,7 +2,7 @@
   <h3><i class="bi bi-clipboard-data-fill"></i> Policies</h3>
   <hr />
   <div class="content-container">
-    <wtw-policies-data-table
+    <data-dashboard-policies-data-table
       [isLoading]="isLoading$ | async"
       [policies]="policies$ | async"
       (selectedPolicyToEdit)="onSelectedPolicyToEdit($event)"
@@ -10,12 +10,12 @@
       (filterByPolicyHolderName)="onPolicyHolderNameChange($event)"
       (orderPoliciesByType)="onOrderPoliciesByType($event)"
       (orderPoliciesByPolicyHolder)="onOrderPoliciesByPolicyHolder($event)"
-    ></wtw-policies-data-table>
-    <wtw-policies-data-editor
+    ></data-dashboard-policies-data-table>
+    <data-dashboard-policies-data-editor
       (createNewPolicy)="onCreateNewPolicy($event)"
       (editExistingPolicy)="onEditExistingPolicy($event)"
       [selectedPolicyToEdit]="selectedPolicyToEdit"
     >
-    </wtw-policies-data-editor>
+    </data-dashboard-policies-data-editor>
   </div>
 </div>

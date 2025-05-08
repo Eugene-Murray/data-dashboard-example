@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { PolicyHolder } from '@wtw/models';
+import { PolicyHolder } from '@data-dashboard/models';
 
 export const getPolicyHolders         = createAction('[Policy Holders] Get all Policy Holders');
 export const getPolicyHoldersSuccess  = createAction('[Policy Holders] Get all Policy Holders Success', props<{ policyHolders: PolicyHolder[] }>());

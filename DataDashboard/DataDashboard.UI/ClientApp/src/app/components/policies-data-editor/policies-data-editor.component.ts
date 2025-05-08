@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { PolicyType, Gender, Policy } from '@wtw/models';
+import { PolicyType, Gender, Policy } from '@data-dashboard/models';
 
 @Component({
-  selector: 'wtw-policies-data-editor',
+  selector: 'data-dashboard-policies-data-editor',
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './policies-data-editor.component.html',
   styleUrl: './policies-data-editor.component.css',

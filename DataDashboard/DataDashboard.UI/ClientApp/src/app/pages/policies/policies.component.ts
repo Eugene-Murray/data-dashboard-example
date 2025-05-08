@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { AppState, Policy } from '@wtw/models';
+import { AppState, Policy } from '@data-dashboard/models';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import * as actions from '@wtw/store';
+import * as actions from '@data-dashboard/store';
 import { 
   selectIsPoliciesLoading, 
   selectIsPolicyTypeDetailsLoaded, 
@@ -11,14 +11,14 @@ import {
   selectPoliciesByHolderName, 
   selectPoliciesOrderedByPolicyHolder, 
   selectPoliciesOrderedByType 
-} from '@wtw/store';
+} from '@data-dashboard/store';
 import { PoliciesDataEditorComponent } from '../../components/policies-data-editor/policies-data-editor.component';
 import { PoliciesDataTableComponent } from '../../components/policies-data-table/policies-data-table.component';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
 @UntilDestroy()
 @Component({
-  selector: 'wtw-policies',
+  selector: 'data-dashboard-policies',
   imports: [CommonModule, PoliciesDataTableComponent, PoliciesDataEditorComponent],
   templateUrl: './policies.component.html',
   styleUrl: './policies.component.css',

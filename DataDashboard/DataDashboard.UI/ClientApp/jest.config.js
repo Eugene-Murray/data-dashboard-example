@@ -11,9 +11,9 @@ module.exports = {
     moduleFileExtensions: ['ts', 'html', 'js', 'json'],
     coverageReporters: ['html', 'lcov', 'text-summary'],
     paths: {
-      "@wtw/models": ["src/app/store/models/index.ts"],
-      "@wtw/services": ["src/app/store/services/index.ts"],
-      "@wtw/store": ["src/app/store/index.ts"]
+      "@data-dashboard/models": ["src/app/store/models/index.ts"],
+      "@data-dashboard/services": ["src/app/store/services/index.ts"],
+      "@data-dashboard/store": ["src/app/store/index.ts"]
     }
   };
   

@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { PolicyTypeDetailsState } from '@wtw/models';
+import { PolicyTypeDetailsState } from '@data-dashboard/models';
 import * as actions from '../actions/policy-type-details.actions';
 
 export const initialPolicyTypeDetailState: PolicyTypeDetailsState = {

@@ -1,5 +1,5 @@
 import { createSelector } from "@ngrx/store";
-import { PolicyTypeDetailsState } from "@wtw/models";
+import { PolicyTypeDetailsState } from "@data-dashboard/models";
 import { selectPolicyTypeDetailsState } from "./app-state.selectors";
 
 export const selectIsPolicyTypeDetailsLoading   = createSelector(selectPolicyTypeDetailsState, (policyTypeDetailsState) => policyTypeDetailsState.loadingPolicyTypeDetails);

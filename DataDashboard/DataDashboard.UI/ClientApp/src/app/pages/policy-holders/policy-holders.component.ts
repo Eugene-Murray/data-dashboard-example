@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { AppState, PolicyHolder } from '@wtw/models';
+import { AppState, PolicyHolder } from '@data-dashboard/models';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
-import * as actions from '@wtw/store';
+import * as actions from '@data-dashboard/store';
 import { 
   selectIsPolicyHolderdsLoaded, 
   selectIsPolicyHoldersLoading, 
   selectPolicyHolders 
-} from '@wtw/store';
+} from '@data-dashboard/store';
 import { Observable } from 'rxjs';
 import { GenderPipe } from '../../pipes/gender.pipe';
 import { RouterModule } from '@angular/router';
@@ -15,7 +15,7 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
 @UntilDestroy()
 @Component({
-  selector: 'wtw-policy-holders',
+  selector: 'data-dashboard-policy-holders',
   imports: [CommonModule, GenderPipe, RouterModule],
   templateUrl: './policy-holders.component.html',
   styleUrl: './policy-holders.component.css',

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { PolicyTypeDetailService } from '@wtw/services';
+import { PolicyTypeDetailService } from '@data-dashboard/services';
 import { of } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
 import * as actions from '../actions/policy-type-details.actions';

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { PolicyTypeDetail } from '@wtw/models';
+import { PolicyTypeDetail } from '@data-dashboard/models';
 
 
 @Injectable({
