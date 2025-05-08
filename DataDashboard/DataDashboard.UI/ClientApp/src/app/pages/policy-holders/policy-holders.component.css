@@ -1,0 +1,8 @@
+h3 {
+    margin-top: 10px;
+}
+
+.table-container {
+    height: 80vh;
+    overflow-y: scroll;
+}

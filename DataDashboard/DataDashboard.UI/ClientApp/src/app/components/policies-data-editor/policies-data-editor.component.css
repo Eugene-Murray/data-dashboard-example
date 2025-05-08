@@ -1,0 +1,26 @@
+.container-fluid {
+  width: 40vw;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.button-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+
+    div {
+        margin-left: 10px;
+        padding-left: 5px;
+    }
+}
+
+.text-danger {
+  font-size: x-small;
+}

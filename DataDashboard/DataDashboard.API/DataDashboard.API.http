@@ -1,0 +1,6 @@
+@DataDashboard.API_HostAddress = http://localhost:5294
+
+GET {{DataDashboard.API_HostAddress}}/policy/
+Accept: application/json
+
+###

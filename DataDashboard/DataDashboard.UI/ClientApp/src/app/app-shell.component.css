@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    background-color: rgb(112, 202, 241);
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+
+.body {
+    display: flex;
+    height: 95vh;
+}
+
+.side-bar {
+    width: 250px; 
+    height: 95vh;
+}

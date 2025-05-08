@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <form [formGroup]="policyForm" (ngSubmit)="onSubmit()">
+    <legend><i class="bi bi-file-text"></i> Policy Details</legend>
+    
+    <div class="mb-3">
+      <label for="policyNumber" class="form-label">Policy Number</label>
+      <input id="policyNumber" formControlName="policyNumber" class="form-control form-control-sm">
+    </div>
+  
+    <div class="mb-3">
+      <label for="policyType" class="form-label">Policy Type</label>
+      <div class="col-sm-5">
+        <select id="policyType" formControlName="policyType" class="form-control form-control-sm">
+          <option value="" disabled>Select Policy Type *</option>
+          <option *ngFor="let pt of policyType" [value]="pt">{{ pt }}</option>
+        </select>
+        @if(policyForm.get('policyType')?.invalid && policyForm.get('policyType')?.touched) {
+          <div class="text-danger">
+            <i class="bi bi-stop-fill"></i> Policy Type is required.
+          </div>
+        }
+      </div>
+    </div>
+  
+    <fieldset formGroupName="policyHolder">
+      <legend><i class="bi bi-file-earmark-person-fill"></i> Policy Holder Details</legend>
+  
+      <div class="mb-3">
+        <label for="name" class="form-label">Name *</label>
+        <input id="name" type="text" formControlName="name" class="form-control form-control-sm" />
+        @if(policyForm.get('policyHolder.name')?.invalid && policyForm.get('policyHolder.name')?.touched) {
+          <div class="text-danger">
+            <i class="bi bi-stop-fill"></i> Name is required.
+          </div>
+        }
+      </div>
+  
+      <div class="mb-3">
+        <label for="age" class="form-label">Age *</label>
+        <div class="col-sm-2">
+        <input id="age" type="number" formControlName="age" class="form-control form-control-sm" />
+      </div>
+        @if(policyForm.get('policyHolder.age')?.invalid && policyForm.get('policyHolder.age')?.touched) {
+          <div class="text-danger">
+            <i class="bi bi-stop-fill"></i> Age is required and must be a non-negative number.
+          </div>
+        }
+      </div>
+  
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender *</label>
+        <div class="col-sm-5">
+        <select id="gender" formControlName="gender" class="form-control form-control-sm">
+          <option value="" disabled>Select Gender</option>
+          <option *ngFor="let g of genders" [value]="g">{{ g }}</option>
+        </select>
+        @if(policyForm.get('policyHolder.gender')?.invalid && policyForm.get('policyHolder.gender')?.touched) {
+          <div class="text-danger">
+            <i class="bi bi-stop-fill"></i> Gender is required.
+          </div>
+        }
+      </div>
+      </div>
+    </fieldset>
+    @if(selectedPolicyToEdit) {
+        <div class="btn-group d-flex justify-content-between" role="group">
+          <button class="w-100 btn btn-success btn-sm" type="submit" [disabled]="policyForm.invalid || !policyForm.touched"><i class="bi bi-patch-check-fill"></i> Update Policy</button>
+          <button class="w-100 btn btn-outline-secondary btn-sm" (click)="clearPolicy()"><i class="bi bi-align-bottom"></i> Reset - Create New Policy</button>
+        </div>
+        @if(policyForm.invalid && policyForm.touched) {
+          <div class="text-bg-danger"> <i class="bi bi-stop-fill"></i> Please fill in all required fields.</div>
+        }
+    } @else {
+      <div class="button-container">
+        <button type="submit" class="btn btn-primary btn-sm" [disabled]="policyForm.invalid || !policyForm.touched"><i class="bi bi-save"></i> Save New Policy</button>
+        @if(policyForm.invalid && policyForm.touched) {
+          <div class="text-bg-danger"> <i class="bi bi-stop-fill"></i> Please fill in all required fields.</div>
+        }
+      </div>
+    }
+  </form>
+</div>
+
+

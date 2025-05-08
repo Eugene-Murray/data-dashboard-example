@@ -1,0 +1,16 @@
+.content-container {
+    width: 100%;
+    display: flex;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .content-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }

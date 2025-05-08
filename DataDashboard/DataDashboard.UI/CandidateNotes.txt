@@ -1,0 +1,39 @@
+﻿
+To Run;
+
+Right click on the solution and select 'Set Startup Projects' and select 'Multiple startup projects' and set 'WTW.API' and 'FullStackTest' to 'Start'.
+
+
+UI;
+
+NGRX - immutable data store / ChangeDetectionStrategy.OnPush
+Component Container / Presentation Pattern
+Jest test setup
+Bootstrap
+NG Prime - Pie chart
+NG Toastr
+@UntilDestroy - Cleanup observables in components (async pipe used to auto destroy observables used in html templates)
+Angular pipes for PolicyType and Gender
+
+API;
+
+Entity Framework InMemory DB
+ViewModel DTOs
+SOLID, modular separation of concerns
+xUnit Tests
+
+
+To Complete;
+
+Responsive Design: There is one css media query in policies.component.css, however responsive design would need more time and effort.
+API validation: DataAnnotation attribute for Required[] field validation on one field has been added in the ViewModels as an example but not in the rest of the ViewModel DTOs or the EntityFramework entities, as this would take more time to fully develop and test.
+UI unit tests - Jest was added to allow for debugging in VS code however adding UI tests would take more time.
+Data grid sorting / filtering : Not fully implemented. Can use potentially AG Grid for fully featured grid.
+Pagination: Not implemented on UI or Server Side for test. Again maybe better to use AG Grid.
+
+
+Note;
+
+As per an real world app, this example app maps the object-graph data either in the API or on the UI depending on the scenario. ie: PolicyHolder is eager mapped to Policy in the API/Entity Framework.
+_db.Policies.Include(p => p.PolicyHolder).ToList()
+However, PolicyTypeDetails is mapped to the Policy in the UI via NGRX.

@@ -1,0 +1,56 @@
+<div class="mb-3 policy-filter-container">
+  <label for="exampleFormControlInput1" class="form-label"><i class="bi bi-search"></i></label>
+  <input type="test" class="form-control" placeholder="Policy Holder Name" id="filter" [(ngModel)]="filterPolicyHolderName" name="name" (ngModelChange)="onPolicyHolderNameChange($event)">
+</div>
+
+<div class="container-fluid">
+  <ng-container *ngIf="isLoading">
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only"></span>
+      </div>
+    </div>
+  </ng-container>
+  
+  @if(policies) {
+    <ng-container>
+      <ng-container *ngIf="policies.length > 0; else noData">
+        <ng-container *ngTemplateOutlet="dataTable"></ng-container>
+      </ng-container>
+    </ng-container>
+  }
+  
+  <ng-template #noData>
+    <div class="alert alert-warning" role="alert">
+      No data available
+    </div>
+  </ng-template>
+  <ng-template #dataTable>  
+    <div class="table-container">
+      @if(policies) {
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th>Policy Number</th>
+              <th>Policy Type <i class="bi bi-arrow-down-up pointer" (click)="onOrderPoliciesByType()"></i></th>
+              <th>Policy Holder <i class="bi bi-arrow-down-up pointer" (click)="onOrderPoliciesByPolicyHolder()"></i></th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let policy of policies" >
+              <td>{{ policy.policyNumber }}</td>
+              <td>{{ policy.policyTypeDetail?.policyType | policyType }}</td>
+              <td>{{ policy.policyHolder.name }}</td>
+              <td><button class="btn btn-secondary btn-sm" (click)="onEdit(policy)"><i class="bi bi-crop"></i> Edit</button></td> 
+              <td><button class="btn btn-danger btn-sm" (click)="onDelete(policy.id)"><i class="bi bi-trash-fill"></i> Delete</button></td> 
+            </tr>
+          </tbody>
+        </table>
+      }
+    </div>
+  </ng-template>
+</div>
+
+

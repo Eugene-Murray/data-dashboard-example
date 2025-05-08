@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <h3><i class="bi bi-boxes"></i> Policy Holder - Policy List</h3>
+  <hr />
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a routerLink="/policy-holders">Policy Holders</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Policy List</li>
+    </ol>
+  </nav>
+  <hr />
+
+  <ng-container *ngIf="policies$ | async as policies">
+    <ng-container *ngIf="policies.length > 0; else noData">
+      <ng-container *ngTemplateOutlet="dataTable"></ng-container>
+    </ng-container>
+  </ng-container>
+
+  <ng-template #noData>
+    <div class="alert alert-warning" role="alert">No data available</div>
+  </ng-template>
+  <ng-template #dataTable>
+    <div class="table-container">
+      <table *ngIf="policies$ | async as policies" class="table table-striped">
+        <thead>
+          <tr class="table-primary">
+            <th>Policy Number</th>
+            <th>Policy Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let policy of policies">
+            <td>{{ policy.policyNumber }}</td>
+            <td>{{ policy.policyTypeDetail?.policyType | policyType }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-template>
+</div>
