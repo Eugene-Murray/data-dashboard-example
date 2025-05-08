@@ -1,4 +1,11 @@
-# Angular NGRX and Asp.Net Core API DataDashboard Example 
+# Angular NGRX and .Net Core API DataDashboard Example
+-NGRX
+-Bootstrap
+-NG Toastr
+-NG Prime
+-Jest
+-xUnit
+-In memory Entity Framework
 
 ![image](https://github.com/user-attachments/assets/560f68c0-7b66-414a-ad75-0db2f1d452be)
 
