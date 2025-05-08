@@ -1,4 +1,4 @@
-# Full Stack Developer Technical Test
+# Angular NGRX and Asp.Net Core API DataDashboard Example 
 
 ## Purpose and Instructions
 
