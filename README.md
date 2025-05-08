@@ -30,6 +30,9 @@
 ## NGRX Effect example;
 ![image](https://github.com/user-attachments/assets/5f0ff94e-5f73-4cfb-b404-c5b83fbd3d7e)
 
+## NGRX Selectors example;
+![image](https://github.com/user-attachments/assets/bf7673e8-b042-4c1c-b48f-9172c2fcff0c)
+
 ## API Unit Tests;
 ![image](https://github.com/user-attachments/assets/c69a3ae9-2f82-4fa1-b7be-09af627e0923)
 
